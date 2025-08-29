@@ -1,0 +1,40 @@
+Solução Dissertativa – Métodos nas Classes do Sistema de Biblioteca
+
+Com base nos fluxos e regras de negócio levantados, foi possível
+identificar os métodos que devem ser acrescentados em cada classe para
+atender às necessidades do sistema de gerenciamento de biblioteca.
+
+1.  Classe Livro A classe Livro deve possuir métodos que permitam
+    alterar o status do livro e verificar sua disponibilidade. Assim,
+    teremos os métodos: emprestar(), devolver() e esta_disponivel().
+    Estes métodos garantem o controle do ciclo de empréstimo de cada
+    exemplar.
+
+2.  Classe Autor A classe Autor representa os escritores cadastrados no
+    sistema. Para ela, são necessários métodos que gerenciem as obras
+    associadas a cada autor, como adicionar_obra(livro) e
+    listar_obras(). Dessa forma, a biblioteca consegue manter o vínculo
+    entre autores e livros publicados.
+
+3.  Classe Usuario O usuário é quem realiza os empréstimos. Assim, esta
+    classe precisa de métodos que controlem se o usuário pode emprestar
+    livros (considerando idade e histórico de devoluções), além de
+    registrar seus empréstimos. Os métodos são: pode_emprestar(),
+    adicionar_emprestimo(emprestimo) e devolver_livro(emprestimo).
+
+4.  Classe Emprestimo A classe Emprestimo centraliza o processo de
+    retirada e devolução de livros. Seus métodos incluem
+    registrar_retirada(usuario, livro), registrar_devolucao() e
+    esta_atrasado(). Isso possibilita acompanhar prazos, datas de
+    retirada e atrasos, fundamentais para a gestão da biblioteca.
+
+5.  Classe Bibliotecario (opcional) Para fins de organização, é possível
+    criar uma classe Bibliotecario que concentre os métodos de cadastro
+    de entidades do sistema. Seus métodos incluem cadastrar_livro(),
+    cadastrar_autor() e cadastrar_usuario().
+
+Conclusão Cada método definido acima reflete diretamente os fluxos do
+sistema: empréstimo e devolução de livros, controle de disponibilidade,
+cadastro de dados e gerenciamento do histórico dos usuários. Dessa
+forma, o sistema garante rastreabilidade, organização e funcionamento
+adequado das operações da biblioteca.
