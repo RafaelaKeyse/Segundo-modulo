@@ -1,0 +1,27 @@
+# Arquivos compilados
+*.class
+
+# Diretórios de saída de compilação
+out/
+bin/
+build/
+
+# Dependências externas
+lib/
+libs/
+
+# Arquivos de configuração do IDE
+.vscode/
+.idea/
+*.iml
+
+# Arquivos temporários do sistema
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Pacotes do Maven/Gradle (se algum dia usar)
+target/
+.gradle/
+
