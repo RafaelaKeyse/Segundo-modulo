@@ -7,9 +7,8 @@ class LivroTest {
 
     @Test
     void testCriacaoLivro() {
-        Autor autor = new Autor("Jess", "Brasileira", "Autor tradicional");
-        Livro livro = new Livro("Java Básico", autor, "Tecnologia", true);
-
+        Autor autor = new Autor("Jess", "Brasileira", "Feminino");
+        Livro livro = new Livro("Java Básico", autor, "Tecnologia");
         assertEquals("Java Básico", livro.getTitulo());
         assertEquals("Jess", livro.getAutor().getNome());
         assertEquals("Tecnologia", livro.getCategoria());
@@ -18,14 +17,13 @@ class LivroTest {
 
     @Test
     void testSetters() {
-        Autor autor = new Autor("Autor1", "Pais1", "Autor tradicional");
-        Livro livro = new Livro("Titulo1", autor, "Categoria1", true);
+        Autor autor = new Autor("Autor1", "Pais1", "Masculino");
+        Livro livro = new Livro("Livro1", autor, "Categoria1");
 
+        Autor novoAutor = new Autor("Autor2", "Pais2", "Feminino");
         livro.setTitulo("NovoTitulo");
         livro.setCategoria("NovaCategoria");
         livro.setDisponivel(false);
-
-        Autor novoAutor = new Autor("Autor2", "Pais2", "Autor tradicional");
         livro.setAutor(novoAutor);
 
         assertEquals("NovoTitulo", livro.getTitulo());
